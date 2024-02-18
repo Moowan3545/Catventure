@@ -122,7 +122,9 @@ public class UI {
                 closeTextBox();
                 // เพิ่มปุ่มเริ่มเกม
                 JButton startButton = new JButton("Start Game");
-                startButton.setBounds(300, 200, 200, 50);
+                startButton.setBounds(750, 520, 450, 70);
+                startButton.setBackground(new java.awt.Color(255, 204, 204));
+                startButton.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 30));
                 startButton.addActionListener(new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent e) {
@@ -134,7 +136,9 @@ public class UI {
 
                 // เพิ่มปุ่มตั้งค่าความยาก
                 JButton difficultyButton = new JButton("Difficulty Settings");
-                difficultyButton.setBounds(300, 300, 200, 50);
+                difficultyButton.setBounds(750, 620, 450, 70);
+                difficultyButton.setBackground(new java.awt.Color(180, 223, 223));
+                difficultyButton.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 30));
                 difficultyButton.addActionListener(new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent e) {
@@ -146,7 +150,9 @@ public class UI {
 
                 // เพิ่มปุ่มปิดเกม
                 JButton exitButton = new JButton("Exit Game");
-                exitButton.setBounds(300, 400, 200, 50);
+                exitButton.setBounds(750, 720, 450, 70);
+                exitButton.setBackground(new java.awt.Color(255, 153, 153));
+                exitButton.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 30));
                 exitButton.addActionListener(new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent e) {
@@ -158,7 +164,9 @@ public class UI {
 
                 // เพิ่ม Label หรือ Text แนะนำการเล่นเกม
                 JLabel introductionLabel = new JLabel("Catventure");
-                introductionLabel.setBounds(200, 100, 400, 50);
+                introductionLabel.setBounds(710, 0,900, 850);
+                introductionLabel.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 90));
+                introductionLabel.setForeground(new java.awt.Color(255, 255, 153));
                 bgPanel[19].add(introductionLabel);
         }
 
@@ -584,14 +592,14 @@ public class UI {
 
                 // SCENE 0
 
-                createBackground(0, "resources\\Bedroom\\FullBed.png");
+                createBackground(0, "resources\\Bedroom\\TheBedroom2.png");
                 createChangeMapBtn(0, 0, 0, 100, 100, "goScene1", "resources\\arrowLeft.png", false);
 
                 // CHAIR
-                createObject(0, 550, 380, 260, 390, "resources\\HD_transparent_picture.png", "Look", "Move", "Cancel",
+                createObject(0, 550, 380, 260, 390, "resources\\Bedroom\\movedChair.png", "Look", "Move", "Cancel",
                                 "lookMovedChair", "moveMovedChair", "cancel");
                 hideObject(0);
-                createObject(0, 550, 380, 260, 390, "resources\\HD_transparent_picture.png", "Look", "Move", "Cancel",
+                createObject(0, 550, 380, 260, 390, "resources\\Bedroom\\chair.png", "Look", "Move", "Cancel",
                                 "lookChair",
                                 "moveChair", "cancel");
 
@@ -629,7 +637,7 @@ public class UI {
 
                 // SCENE 1
 
-                createBackground(1, "resources\\House\\FullHouse.png");
+                createBackground(1, "resources\\House\\House.png");
                 createChangeMapBtn(1, 0, 0, 100, 100, "goScene2",
                                 "resources\\arrowLeft.png", false);
                 createChangeMapBtn(1, 0, 0, 100, 100, "goScene0",
@@ -681,7 +689,7 @@ public class UI {
                 bgPanel[1].setVisible(false);
 
                 // SCENE 2
-                createBackground(2, "resources\\Neighborhood\\FullNeighborhood.png");
+                createBackground(2, "resources\\Neighborhood\\Background.png");
                 createChangeMapBtn(2, 0, 0, 100, 100, "goScene1",
                                 "resources\\arrowRight.png", true);
                 createObject(2, 870, 310, 100, 100, "resources\\Neighborhood\\BiggerCat.png",
